@@ -3,85 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superman.inc</title>
+    <title>Smolbanana Pvt Ltd</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            background-image: url('goofy-background.jpg');
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #FFEBB7; /* Carrot-like background */
+            color: #333;
             margin: 0;
             padding: 0;
         }
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 200px;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            box-sizing: border-box;
+        .top-bar {
+            background-color: #FFA500;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.2em;
         }
-        .content {
-            margin-left: 220px;
+        .container {
             padding: 20px;
         }
-        h1, h2 {
-            color: #333;
+        h1 {
+            text-align: center;
+            color: #FF4500;
         }
-        p {
-            color: #666;
+        .reviews {
+            margin-top: 20px;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        .review {
+            background-color: #FFF8DC;
+            border: 1px solid #FFA500;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
+        .review h3 {
+            margin: 0 0 5px 0;
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .review p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>AI Assistant</h2>
-        <p style="font-style: italic;">"Welcome, darling! How can I assist you today?"</p>
+    <div class="top-bar">
+        We make smol banana, it fit in yo mouth! We own 69% of Google.
     </div>
-    <div class="content">
-        <h1>Welcome to Superman.inc</h1>
-        <div class="dropdown">
-            <span>About Us</span>
-            <div class="dropdown-content">
-                <p>We make Superman real!</p>
-                <p>We own Google, 70% and counting...</p>
+    <div class="container">
+        <h1>Smolbanana Pvt Ltd</h1>
+        <h2>CEO: Chris Toyd</h2>
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <h3>Mohan</h3>
+                <p>"Ye company har din call karte hai"</p>
+            </div>
+            <div class="review">
+                <h3>Review 1</h3>
+                <p>"Smolbanana changed my life. Now I can eat bananas without any hassle!"</p>
+            </div>
+            <div class="review">
+                <h3>Review 2</h3>
+                <p>"I can't believe it's not butter! Oh wait, it's a banana."</p>
+            </div>
+            <div class="review">
+                <h3>Review 3</h3>
+                <p>"These bananas are so small, even my pet hamster can enjoy them."</p>
+            </div>
+            <div class="review">
+                <h3>Review 4</h3>
+                <p>"Finally, a banana that fits in my pocket. Genius!"</p>
+            </div>
+            <div class="review">
+                <h3>Review 5</h3>
+                <p>"Bananas will never be the same again. Thank you, Smolbanana!"</p>
+            </div>
+            <div class="review">
+                <h3>Review 6</h3>
+                <p>"I was skeptical at first, but now I'm a believer. Smolbanana is the future."</p>
+            </div>
+            <div class="review">
+                <h3>Review 7</h3>
+                <p>"Perfect size for banana bread. No more waste!"</p>
+            </div>
+            <div class="review">
+                <h3>Review 8</h3>
+                <p>"I can't get enough of these tiny bananas. They're adorable and delicious."</p>
+            </div>
+            <div class="review">
+                <h3>Review 9</h3>
+                <p>"Who knew bananas could be this fun? My kids love them."</p>
+            </div>
+            <div class="review">
+                <h3>Review 10</h3>
+                <p>"Smolbanana has revolutionized my snacking game. Highly recommend!"</p>
             </div>
         </div>
-        <p>Explore the incredible world of innovation at Superman.inc.</p>
-        <p>Founded by the charismatic CEO, Chris Toyd, we're here to revolutionize the universe!</p>
     </div>
-
-    <script>
-        // AI Assistant Scripts with Indian Accent
-        const greetings = ["Namaste!", "Hello, love!", "Jai Hind! How can I help you today?", "Welcome, darling!"];
-        const responses = ["Let me assist you, honey.", "I'm here to make your day brighter!", "Ask me anything, beautiful!"];
-        
-        function randomItem(arr) {
-            return arr[Math.floor(Math.random() * arr.length)];
-        }
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const aiAssistant = document.querySelector('.sidebar p');
-            aiAssistant.textContent = `"${randomItem(greetings)} ${randomItem(responses)}"`;
-        });
-    </script>
 </body>
 </html>
