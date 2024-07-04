@@ -1,134 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goofy chris website</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        padding: 20px;
-        border-radius: 8px;
-    }
-    h1 {
-        text-align: center;
-        color: #444;
-    }
-    .chat-container {
-        border: 1px solid #ccc;
-        background-color: #f0f0f0;
-        padding: 10px;
-        border-radius: 8px;
-        overflow-y: scroll;
-        max-height: 300px;
-    }
-    .chat-message {
-        margin: 10px 0;
-        padding: 5px 10px;
-        background-color: #fff;
-        border-radius: 6px;
-        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
-    }
-    .chat-message.bot {
-        background-color: #e1ffc7;
-    }
-    .chat-message.user {
-        background-color: #c7d9ff;
-        text-align: right;
-    }
-    .input-container {
-        margin-top: 10px;
-    }
-    input[type="text"] {
-        width: calc(100% - 60px);
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-    button {
-        padding: 8px 20px;
-        background-color: #4caf50;
-        border: none;
-        color: white;
-        cursor: pointer;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-    button:hover {
-        background-color: #45a049;
-    }
-    .pictures {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-    .pictures img {
-        margin: 0 10px;
-        max-width: 200px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .credit {
-        text-align: center;
-        margin-top: 20px;
-        font-style: italic;
-        color: #777;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superman.inc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('goofy-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <h1>Autumn Theme with Funny Chatbot</h1>
-
-    <div class="chat-container" id="chatContainer">
-        <div class="chat-message bot">Hi there! How can I assist you today?</div>
+    <div class="sidebar">
+        <h2>AI Assistant</h2>
+        <p style="font-style: italic;">"Welcome, darling! How can I assist you today?"</p>
+    </div>
+    <div class="content">
+        <h1>Welcome to Superman.inc</h1>
+        <div class="dropdown">
+            <span>About Us</span>
+            <div class="dropdown-content">
+                <p>We make Superman real!</p>
+                <p>We own Google, 70% and counting...</p>
+            </div>
+        </div>
+        <p>Explore the incredible world of innovation at Superman.inc.</p>
+        <p>Founded by the charismatic CEO, Chris Toyd, we're here to revolutionize the universe!</p>
     </div>
 
-    <div class="input-container">
-        <input type="text" id="userInput" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-
-    <div class="pictures">
-        <img src="https://via.placeholder.com/200" alt="Autumn Picture">
-        <img src="https://via.placeholder.com/200" alt="Autumn Picture">
-        <img src="https://via.placeholder.com/200" alt="Autumn Picture">
-    </div>
-
-    <div class="credit">Made by legendary Chris Toyd</div>
-</div>
-
-<script>
-function sendMessage() {
-    var userInput = document.getElementById('userInput').value;
-    var chatContainer = document.getElementById('chatContainer');
-
-    if (userInput.trim() === '') return;
-
-    var userMessage = '<div class="chat-message user">' + userInput + '</div>';
-    chatContainer.innerHTML += userMessage;
-
-    // Simulate bot response after 1 second
-    setTimeout(function() {
-        var botMessage = '<div class="chat-message bot">Haha! That\'s funny! How about this? 🍁</div>';
-        chatContainer.innerHTML += botMessage;
-        chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
-    }, 1000);
-
-    document.getElementById('userInput').value = '';
-}
-</script>
-
+    <script>
+        // AI Assistant Scripts with Indian Accent
+        const greetings = ["Namaste!", "Hello, love!", "Jai Hind! How can I help you today?", "Welcome, darling!"];
+        const responses = ["Let me assist you, honey.", "I'm here to make your day brighter!", "Ask me anything, beautiful!"];
+        
+        function randomItem(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const aiAssistant = document.querySelector('.sidebar p');
+            aiAssistant.textContent = `"${randomItem(greetings)} ${randomItem(responses)}"`;
+        });
+    </script>
 </body>
 </html>
