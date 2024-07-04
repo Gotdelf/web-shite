@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goofy chris website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        color: #444;
+    }
+    .chat-container {
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 8px;
+        overflow-y: scroll;
+        max-height: 300px;
+    }
+    .chat-message {
+        margin: 10px 0;
+        padding: 5px 10px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    }
+    .chat-message.bot {
+        background-color: #e1ffc7;
+    }
+    .chat-message.user {
+        background-color: #c7d9ff;
+        text-align: right;
+    }
+    .input-container {
+        margin-top: 10px;
+    }
+    input[type="text"] {
+        width: calc(100% - 60px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    button {
+        padding: 8px 20px;
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .pictures {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .pictures img {
+        margin: 0 10px;
+        max-width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .credit {
+        text-align: center;
+        margin-top: 20px;
+        font-style: italic;
+        color: #777;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Autumn Theme with Funny Chatbot</h1>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-message bot">Hi there! How can I assist you today?</div>
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="pictures">
+        <img src="https://via.placeholder.com/200" alt="Autumn Picture">
+        <img src="https://via.placeholder.com/200" alt="Autumn Picture">
+        <img src="https://via.placeholder.com/200" alt="Autumn Picture">
+    </div>
+
+    <div class="credit">Made by legendary Chris Toyd</div>
+</div>
+
+<script>
+function sendMessage() {
+    var userInput = document.getElementById('userInput').value;
+    var chatContainer = document.getElementById('chatContainer');
+
+    if (userInput.trim() === '') return;
+
+    var userMessage = '<div class="chat-message user">' + userInput + '</div>';
+    chatContainer.innerHTML += userMessage;
+
+    // Simulate bot response after 1 second
+    setTimeout(function() {
+        var botMessage = '<div class="chat-message bot">Haha! That\'s funny! How about this? 🍁</div>';
+        chatContainer.innerHTML += botMessage;
+        chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+    }, 1000);
+
+    document.getElementById('userInput').value = '';
+}
+</script>
+
+</body>
+</html>
